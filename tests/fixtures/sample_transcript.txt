@@ -1,0 +1,12 @@
+Product Owner: We need users to be able to reset their passwords through the portal.
+Stakeholder: Yes, and it should send an email with a reset link automatically.
+Developer: What happens if the email address doesn't exist in our system?
+Product Owner: We should show a message but not reveal whether the account actually exists — it's a security requirement.
+BA: Understood. How long should the reset link remain valid?
+Product Owner: 24 hours. After that it should expire and they'd need to request a new one.
+Stakeholder: Also — can we make sure the link can only be used once? Even if it's within the 24-hour window.
+Product Owner: Absolutely, yes. One-time use only.
+BA: Any requirements around password complexity for the new password they set?
+Product Owner: It needs to match our existing password policy — at least 8 characters, one uppercase, one number, one special character.
+Developer: And should we notify the user after the password is successfully changed?
+Product Owner: Good point. Yes, send a confirmation email once the reset is complete.

@@ -1,0 +1,47 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.17/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.17",
+  "version": "1.0.0",
+  "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+  "packageName": "io.voxstory.app",
+  "developer": {
+    "name": "Mahum Siddiqui",
+    "websiteUrl": "https://github.com/smagha2/voxstory",
+    "privacyUrl": "https://github.com/smagha2/voxstory/blob/main/README.md",
+    "termsOfUseUrl": "https://github.com/smagha2/voxstory/blob/main/LICENSE"
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "name": {
+    "short": "VoxStory",
+    "full": "VoxStory — AI BA Agent"
+  },
+  "description": {
+    "short": "Transform meeting notes into Jira-ready user stories",
+    "full": "VoxStory is an AI-powered Business Analyst agent. Paste meeting transcripts or stakeholder notes — get INVEST-compliant user stories, Gherkin acceptance criteria, solution architecture maps, and multi-stakeholder synthesis. Runs on Groq (free tier available)."
+  },
+  "accentColor": "#0052CC",
+  "staticTabs": [
+    {
+      "entityId": "voxstory-app",
+      "name": "VoxStory",
+      "contentUrl": "https://voxstory.streamlit.app",
+      "websiteUrl": "https://voxstory.streamlit.app",
+      "scopes": ["personal"]
+    }
+  ],
+  "configurableTabs": [
+    {
+      "configurationUrl": "https://voxstory.streamlit.app",
+      "canUpdateConfiguration": true,
+      "scopes": ["team", "groupchat"]
+    }
+  ],
+  "permissions": ["identity", "messageTeamMembers"],
+  "validDomains": [
+    "*.streamlit.app",
+    "voxstory.streamlit.app"
+  ]
+}

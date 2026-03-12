@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "VoxStory — AI BA Agent",
+  "version": "1.0.0",
+  "description": "Transform meeting notes into Jira-ready user stories. Works alongside Zoom, Teams, Google Meet, and Webex.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "VoxStory — AI BA Agent"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "options.html",
+  "permissions": [
+    "storage",
+    "windows",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://*.streamlit.app/*"
+  ]
+}

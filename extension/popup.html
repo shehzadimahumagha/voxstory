@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VoxStory</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      width: 320px;
+      background: #F4F5F7;
+      color: #172B4D;
+    }
+
+    /* ── Header ── */
+    .header {
+      background: linear-gradient(135deg, #0747A6 0%, #172B4D 100%);
+      padding: 18px 20px 16px;
+    }
+    .logo {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #F1F5F9;
+      letter-spacing: -0.04em;
+      line-height: 1;
+    }
+    .logo-accent { color: #4C9AFF; }
+    .tagline {
+      font-size: 0.68rem;
+      color: #6C8EAD;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    /* ── Body ── */
+    .body { padding: 16px 20px; }
+
+    .section-label {
+      font-size: 0.63rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #5E6C84;
+      margin-bottom: 8px;
+    }
+
+    /* ── Main button ── */
+    .btn-primary {
+      display: block;
+      width: 100%;
+      background: #0052CC;
+      color: #FFF;
+      border: none;
+      border-radius: 4px;
+      font-family: inherit;
+      font-size: 0.875rem;
+      font-weight: 600;
+      padding: 11px 16px;
+      cursor: pointer;
+      text-align: center;
+      transition: background 0.15s;
+      margin-bottom: 12px;
+    }
+    .btn-primary:hover { background: #0065FF; }
+
+    /* ── Platform buttons ── */
+    .platform-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .btn-platform {
+      background: #FFFFFF;
+      border: 1px solid #DFE1E6;
+      border-radius: 4px;
+      padding: 8px 10px;
+      font-family: inherit;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: #172B4D;
+      cursor: pointer;
+      text-align: left;
+      transition: border-color 0.12s, color 0.12s;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .btn-platform:hover {
+      border-color: #0052CC;
+      color: #0052CC;
+    }
+    .platform-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ── URL display ── */
+    .url-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #FFFFFF;
+      border: 1px solid #DFE1E6;
+      border-radius: 4px;
+      padding: 7px 10px;
+      margin-bottom: 12px;
+    }
+    .url-text {
+      font-size: 0.72rem;
+      color: #5E6C84;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      flex: 1;
+    }
+    .btn-settings {
+      background: none;
+      border: none;
+      font-size: 0.72rem;
+      color: #0052CC;
+      cursor: pointer;
+      font-family: inherit;
+      font-weight: 600;
+      padding: 0;
+      flex-shrink: 0;
+      margin-left: 8px;
+    }
+    .btn-settings:hover { text-decoration: underline; }
+
+    /* ── Divider ── */
+    .divider {
+      border: none;
+      border-top: 1px solid #DFE1E6;
+      margin: 12px 0;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      font-size: 0.65rem;
+      color: #5E6C84;
+      padding: 0 0 4px;
+      text-align: center;
+    }
+    .footer a { color: #0052CC; text-decoration: none; }
+    .footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">Vox<span class="logo-accent">Story</span></div>
+    <div class="tagline">AI Business Analyst Agent</div>
+  </div>
+
+  <div class="body">
+    <!-- Open VoxStory -->
+    <button class="btn-primary" id="openMain">Open VoxStory</button>
+
+    <!-- Current URL -->
+    <div class="url-row">
+      <span class="url-text" id="currentUrl">Loading...</span>
+      <button class="btn-settings" id="openSettings">Configure</button>
+    </div>
+
+    <!-- Open alongside platform -->
+    <div class="section-label">Open alongside your meeting</div>
+    <div class="platform-grid">
+      <button class="btn-platform" data-platform="zoom">
+        <span class="platform-dot" style="background:#2D8CFF;"></span>
+        Zoom Web
+      </button>
+      <button class="btn-platform" data-platform="teams">
+        <span class="platform-dot" style="background:#6264A7;"></span>
+        MS Teams
+      </button>
+      <button class="btn-platform" data-platform="meet">
+        <span class="platform-dot" style="background:#00875A;"></span>
+        Google Meet
+      </button>
+      <button class="btn-platform" data-platform="webex">
+        <span class="platform-dot" style="background:#E67700;"></span>
+        Webex
+      </button>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="footer">
+      VoxStory v1.0 &nbsp;&middot;&nbsp;
+      <a href="https://github.com/smagha2/voxstory" target="_blank">GitHub</a>
+      &nbsp;&middot;&nbsp;
+      <a href="https://console.groq.com" target="_blank">Get free API key</a>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

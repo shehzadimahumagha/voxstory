@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>VoxStory Settings</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #F4F5F7;
+      color: #172B4D;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 48px 16px;
+    }
+    .card {
+      background: #FFFFFF;
+      border: 1px solid #DFE1E6;
+      border-radius: 8px;
+      padding: 32px;
+      width: 100%;
+      max-width: 480px;
+    }
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #172B4D;
+      letter-spacing: -0.04em;
+      margin-bottom: 4px;
+    }
+    .logo-accent { color: #0052CC; }
+    .subtitle {
+      font-size: 0.82rem;
+      color: #5E6C84;
+      margin-bottom: 28px;
+    }
+    label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #5E6C84;
+      margin-bottom: 6px;
+    }
+    input[type="url"] {
+      width: 100%;
+      border: 1px solid #DFE1E6;
+      border-radius: 4px;
+      padding: 10px 12px;
+      font-family: inherit;
+      font-size: 0.875rem;
+      color: #172B4D;
+      background: #FAFBFC;
+      outline: none;
+      transition: border-color 0.15s, box-shadow 0.15s;
+      margin-bottom: 6px;
+    }
+    input[type="url"]:focus {
+      border-color: #0052CC;
+      box-shadow: 0 0 0 3px rgba(0,82,204,0.12);
+    }
+    .hint {
+      font-size: 0.72rem;
+      color: #5E6C84;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+    .hint a { color: #0052CC; text-decoration: none; }
+    .hint a:hover { text-decoration: underline; }
+    .btn-save {
+      background: #0052CC;
+      color: #FFF;
+      border: none;
+      border-radius: 4px;
+      font-family: inherit;
+      font-size: 0.875rem;
+      font-weight: 600;
+      padding: 10px 24px;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .btn-save:hover { background: #0065FF; }
+    .status {
+      font-size: 0.78rem;
+      color: #00875A;
+      font-weight: 500;
+      margin-top: 12px;
+      min-height: 1.2em;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #DFE1E6;
+      margin: 24px 0;
+    }
+    .deploy-tip {
+      font-size: 0.78rem;
+      color: #5E6C84;
+      line-height: 1.65;
+    }
+    .deploy-tip strong { color: #172B4D; }
+    .deploy-tip code {
+      background: #F4F5F7;
+      border: 1px solid #DFE1E6;
+      border-radius: 3px;
+      padding: 1px 5px;
+      font-size: 0.75rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">Vox<span class="logo-accent">Story</span> Settings</div>
+    <div class="subtitle">Configure your VoxStory deployment URL</div>
+
+    <label for="urlInput">VoxStory URL</label>
+    <input
+      type="url"
+      id="urlInput"
+      placeholder="https://your-app.streamlit.app"
+    />
+    <div class="hint">
+      Point this to your own deployed instance, or use the public demo at
+      <a href="https://voxstory.streamlit.app" target="_blank">voxstory.streamlit.app</a>.
+    </div>
+
+    <button class="btn-save" id="saveBtn">Save Settings</button>
+    <div class="status" id="statusMsg"></div>
+
+    <hr />
+
+    <div class="deploy-tip">
+      <strong>Deploy your own instance (free)</strong><br />
+      1. Fork the repo on
+      <a href="https://github.com/smagha2/voxstory" target="_blank">GitHub</a><br />
+      2. Go to <a href="https://share.streamlit.io" target="_blank">share.streamlit.io</a>
+         and connect your fork<br />
+      3. Add your <code>GROQ_API_KEY</code> in Streamlit Secrets<br />
+      4. Paste your deployment URL above
+    </div>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>
