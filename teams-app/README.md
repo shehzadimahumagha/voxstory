@@ -13,7 +13,7 @@ Add VoxStory as a tab in any Teams channel, group chat, or personal app.
 
 1. Open a Teams channel or meeting chat
 2. Click **+** next to the tab bar → **Website**
-3. Paste your VoxStory URL: `https://voxstory.streamlit.app`
+3. Paste your VoxStory URL: `https://huggingface.co/spaces/shehzadimahumagha/voxstory`
 4. Name it **VoxStory** → Save
 
 ## Building the Teams App Package
@@ -31,6 +31,6 @@ The `.zip` contains:
 ## Customising the URL
 
 If you have your own deployed instance, edit `manifest.json` and replace
-`https://voxstory.streamlit.app` with your URL in `contentUrl` and `websiteUrl`.
+`https://huggingface.co/spaces/shehzadimahumagha/voxstory` with your URL in `contentUrl` and `websiteUrl`.
 
 Then re-zip and re-upload.

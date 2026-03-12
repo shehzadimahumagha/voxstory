@@ -3,7 +3,7 @@
  * Handles installation events and keyboard shortcut commands.
  */
 
-const DEFAULT_URL = "https://voxstory.streamlit.app";
+const DEFAULT_URL = "https://huggingface.co/spaces/shehzadimahumagha/voxstory";
 
 chrome.runtime.onInstalled.addListener((details) => {
   if (details.reason === "install") {

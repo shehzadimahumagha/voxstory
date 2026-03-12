@@ -3,7 +3,7 @@
  * Saves and loads the configured VoxStory deployment URL.
  */
 
-const DEFAULT_URL = "https://voxstory.streamlit.app";
+const DEFAULT_URL = "https://huggingface.co/spaces/shehzadimahumagha/voxstory";
 
 document.addEventListener("DOMContentLoaded", () => {
   const input  = document.getElementById("urlInput");

@@ -3,7 +3,7 @@
  * Handles the extension popup: open app, configure URL, open alongside platforms.
  */
 
-const DEFAULT_URL = "https://voxstory.streamlit.app";
+const DEFAULT_URL = "https://huggingface.co/spaces/shehzadimahumagha/voxstory";
 
 const PLATFORM_URLS = {
   zoom:  "https://app.zoom.us/wc",

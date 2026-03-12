@@ -27,21 +27,21 @@
     {
       "entityId": "voxstory-app",
       "name": "VoxStory",
-      "contentUrl": "https://voxstory.streamlit.app",
-      "websiteUrl": "https://voxstory.streamlit.app",
+      "contentUrl": "https://huggingface.co/spaces/shehzadimahumagha/voxstory",
+      "websiteUrl": "https://huggingface.co/spaces/shehzadimahumagha/voxstory",
       "scopes": ["personal"]
     }
   ],
   "configurableTabs": [
     {
-      "configurationUrl": "https://voxstory.streamlit.app",
+      "configurationUrl": "https://huggingface.co/spaces/shehzadimahumagha/voxstory",
       "canUpdateConfiguration": true,
       "scopes": ["team", "groupchat"]
     }
   ],
   "permissions": ["identity", "messageTeamMembers"],
   "validDomains": [
-    "*.streamlit.app",
-    "voxstory.streamlit.app"
+    "huggingface.co",
+    "huggingface.co"
   ]
 }

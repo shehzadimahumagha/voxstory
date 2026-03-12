@@ -29,6 +29,6 @@
     "tabs"
   ],
   "host_permissions": [
-    "https://*.streamlit.app/*"
+    "https://huggingface.co/*"
   ]
 }
