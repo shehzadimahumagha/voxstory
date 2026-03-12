@@ -1,3 +1,14 @@
+---
+title: VoxStory
+emoji: 📋
+colorFrom: blue
+colorTo: indigo
+sdk: streamlit
+sdk_version: "1.41.0"
+app_file: app.py
+pinned: false
+---
+
 # VoxStory
 
 **AI-powered Business Analyst Agent — from meeting chaos to Jira-ready artifacts in seconds.**
